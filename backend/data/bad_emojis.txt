@@ -1,0 +1,39 @@
+# Offensive Emojis List
+# This file contains emojis that should be flagged as inappropriate
+
+# Offensive Gestures
+🖕
+🖕🏻
+🖕🏼
+🖕🏽
+🖕🏾
+🖕🏿
+
+# Explicit/Sexual Content
+🍆
+🍑
+💦
+🔞
+🥵
+😈
+👅
+💋
+
+# Violence/Weapons
+🔪
+🗡️
+🔫
+💣
+⚰️
+🪦
+☠️
+💀
+
+# Hate Symbols
+卐
+卍
+
+# Other Potentially Offensive
+🤬
+💩
+🤮

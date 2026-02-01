@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+transformers
+torch
+pydantic
+better-profanity
+tf-keras
+scikit-learn
+requests

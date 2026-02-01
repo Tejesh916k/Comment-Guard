@@ -1,0 +1,111 @@
+{
+  "strictness": "high",
+  "total_cases": 110,
+  "accuracy": 0.8454545454545455,
+  "precision": 0.953125,
+  "recall": 0.8133333333333334,
+  "f1_score": 0.8776978417266187,
+  "confusion_matrix": [
+    [
+      32,
+      3
+    ],
+    [
+      14,
+      61
+    ]
+  ],
+  "false_positives": 3,
+  "false_negatives": 14,
+  "false_positive_examples": [
+    {
+      "text": "Great post, keep it up!",
+      "category": "positive",
+      "response": {
+        "text": "Great post, keep it up!",
+        "results": [
+          {
+            "label": "profanity_strict",
+            "score": 1.0
+          }
+        ],
+        "is_toxic": true
+      }
+    },
+    {
+      "text": "Damn that's impressive",
+      "category": "mild_slang",
+      "response": {
+        "text": "Damn that's impressive",
+        "results": [
+          {
+            "label": "profanity_strict",
+            "score": 1.0
+          }
+        ],
+        "is_toxic": true
+      }
+    },
+    {
+      "text": "Hell yeah!",
+      "category": "mild_slang",
+      "response": {
+        "text": "Hell yeah!",
+        "results": [
+          {
+            "label": "profanity_strict",
+            "score": 1.0
+          }
+        ],
+        "is_toxic": true
+      }
+    }
+  ],
+  "false_negative_examples": [
+    {
+      "text": "You're so dumb",
+      "category": "insult",
+      "response": {
+        "text": "You're so dumb",
+        "results": [],
+        "is_toxic": false
+      }
+    },
+    {
+      "text": "What a loser",
+      "category": "insult",
+      "response": {
+        "text": "What a loser",
+        "results": [],
+        "is_toxic": false
+      }
+    },
+    {
+      "text": "I will find you",
+      "category": "threat",
+      "response": {
+        "text": "I will find you",
+        "results": [],
+        "is_toxic": false
+      }
+    },
+    {
+      "text": "You deserve to die",
+      "category": "threat",
+      "response": {
+        "text": "You deserve to die",
+        "results": [],
+        "is_toxic": false
+      }
+    },
+    {
+      "text": "I hate you so much",
+      "category": "hate",
+      "response": {
+        "text": "I hate you so much",
+        "results": [],
+        "is_toxic": false
+      }
+    }
+  ]
+}

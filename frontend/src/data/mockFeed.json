@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "userType": "celeb",
+        "username": "actorprabhas",
+        "name": "Prabhas",
+        "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
+        "image": "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1000&auto=format&fit=crop",
+        "caption": "Project K loading... 🚀 The future is here. #Kalki2898AD",
+        "likes": "1.2M",
+        "comments": [
+            {
+                "id": 101,
+                "user": "fan_boy_99",
+                "text": "Rebel Star! 🔥"
+            },
+            {
+                "id": 102,
+                "user": "movie_buff",
+                "text": "Waiting eagerly sir!"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "userType": "celeb",
+        "username": "alluarjunonline",
+        "name": "Allu Arjun",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+        "image": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=1000&auto=format&fit=crop",
+        "caption": "Pushpa 2 The Rule. 🌲🔥 Wild vibes. #Pushpa2",
+        "likes": "2.5M",
+        "comments": [
+            {
+                "id": 201,
+                "user": "pushpa_raj",
+                "text": "Thaggede Le! 😎"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "userType": "celeb",
+        "username": "urstrulymahesh",
+        "name": "Mahesh Babu",
+        "avatar": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=400&h=400&fit=crop",
+        "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1000&auto=format&fit=crop",
+        "caption": "Parisian nights. Family time ❤️ #TravelDiaries",
+        "likes": "900K",
+        "comments": []
+    },
+    {
+        "id": 4,
+        "userType": "friend",
+        "username": "ravi_kumar_99",
+        "name": "Ravi Kumar",
+        "avatar": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=400&h=400&fit=crop",
+        "image": "https://images.unsplash.com/photo-1511974035430-5de47d3b95da?q=80&w=1000&auto=format&fit=crop",
+        "caption": "Weekend vibes with the gang! 🍻 Camping under the stars.",
+        "likes": "54",
+        "comments": [
+            {
+                "id": 401,
+                "user": "you",
+                "text": "Looks fun!"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "userType": "friend",
+        "username": "sneha_reddy",
+        "name": "Sneha Reddy",
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+        "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop",
+        "caption": "New look! 💃 #Fashion #OOTD",
+        "likes": "120",
+        "comments": []
+    }
+]
