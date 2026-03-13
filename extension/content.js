@@ -124,6 +124,9 @@ function showWarning(element) {
     element.style.setProperty('color', '#ff4500', 'important'); // Orange-red text
     element.style.setProperty('font-weight', 'bold', 'important');
     
+    // Mark element as toxic so we can block the Enter key
+    element.dataset.cgToxic = "true";
+    
     // Find and disable the "Send" button on Instagram
     // Instagram's Send button is usually a nearby div with role="button" containing "Send"
     disableSendButton(element);
@@ -172,6 +175,10 @@ function clearWarning(element) {
     element.style.removeProperty('color');
     element.style.removeProperty('font-weight');
     
+    if (element.dataset.cgToxic) {
+        delete element.dataset.cgToxic;
+    }
+    
     // Re-enable Send buttons
     enableSendButtons();
     
@@ -197,3 +204,38 @@ function enableSendButtons() {
         delete btn.dataset.cgDisabledBtn;
     });
 }
+
+// Block the Enter key if the input is marked as toxic
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        let target = event.target || event;
+        // Find the editable container
+        if (target.nodeType === 3) target = target.parentNode;
+        let editableContainer = target;
+        if (editableContainer && typeof editableContainer.closest === 'function') {
+            const closestContentEditable = editableContainer.closest('[contenteditable="true"], [contenteditable="plaintext-only"], textarea, input[type="text"]');
+            if (closestContentEditable) {
+                editableContainer = closestContentEditable;
+            }
+        }
+        
+        // If it's a toxic container, prevent the Enter key from submitting
+        if (editableContainer && editableContainer.dataset.cgToxic === "true") {
+            // Allow shift+enter for newlines, but block bare enter for submission
+            if (!event.shiftKey) {
+                event.preventDefault();
+                event.stopPropagation();
+                
+                // Shake the element to indicate it's blocked
+                editableContainer.style.setProperty('transform', 'translateX(5px)', 'important');
+                setTimeout(() => {
+                    editableContainer.style.setProperty('transform', 'translateX(-5px)', 'important');
+                    setTimeout(() => {
+                        editableContainer.style.removeProperty('transform');
+                    }, 50);
+                }, 50);
+            }
+        }
+    }
+}, true); // Use capture phase to intercept before React handles it
+
