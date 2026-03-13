@@ -103,23 +103,33 @@ function showScanningIndicator(element) {
 
 function checkTextToxicity(text, element) {
     // Send message to background script to check the text
-    chrome.runtime.sendMessage(
-        { action: "checkComment", text: text },
-        (response) => {
-            if (chrome.runtime.lastError) {
-                console.error("Comment Guard Error:", chrome.runtime.lastError.message);
-                return;
-            }
+    try {
+        chrome.runtime.sendMessage(
+            { action: "checkComment", text: text },
+            (response) => {
+                if (chrome.runtime.lastError) {
+                    console.error("Comment Guard Error:", chrome.runtime.lastError.message);
+                    return;
+                }
 
-            if (response && response.success) {
-                if (response.data.is_toxic) {
-                    showWarning(element);
-                } else {
-                    clearWarning(element);
+                if (response && response.success) {
+                    if (response.data.is_toxic) {
+                        showWarning(element);
+                    } else {
+                        clearWarning(element);
+                    }
                 }
             }
+        );
+    } catch (e) {
+        // Suppress "Extension context invalidated" uncaught errors.
+        // This only happens when the developer reloads the extension but forgets to refresh the page.
+        if (e.message && e.message.includes("Extension context invalidated")) {
+            console.warn("Comment Guard: Extension was reloaded. Please refresh this page (F5) to restore functionality.");
+        } else {
+            console.error("Comment Guard Error:", e);
         }
-    );
+    }
 }
 
 function showWarning(element) {
