@@ -1,39 +1,94 @@
-# Offensive Emojis List
-# This file contains emojis that should be flagged as inappropriate
+# Offensive Emojis Blacklist
+# Emojis that should be blocked in comments/chat
+# Add or remove as needed for your moderation policy
 
-# Offensive Gestures
+# ── Offensive Gestures ────────────────────────────────────────────
 🖕
 🖕🏻
 🖕🏼
 🖕🏽
 🖕🏾
 🖕🏿
+🤙
+🤏
 
-# Explicit/Sexual Content
+# ── Threats / Violence / Weapons ─────────────────────────────────
+🔪
+🗡️
+🔫
+🪃
+💣
+🧨
+⚰️
+🪦
+☠️
+💀
+🩸
+🪓
+🏹
+⚔️
+🛡️
+
+# ── Death / Dark Symbols ──────────────────────────────────────────
+👊
+🤜
+🤛
+💢
+😡
+🤬
+😤
+👿
+😾
+
+# ── Explicit / Sexual Content ─────────────────────────────────────
 🍆
 🍑
 💦
 🔞
 🥵
-😈
 👅
 💋
+🍒
+🌮
+🌭
+🍌
+🍫
+🛏️
+🔑
+📸
+🩲
+🩳
+👙
+💊
 
-# Violence/Weapons
-🔪
-🗡️
-🔫
-💣
-⚰️
-🪦
-☠️
-💀
+# ── Harassment / Mocking ─────────────────────────────────────────
+🤡
+🤢
+🤮
+💩
+🐷
+🐖
+🐮
+🐄
+🐒
+🙊
+🐸
+🐀
+🐁
+🦠
+🐛
+🪲
+🪳
 
-# Hate Symbols
+# ── Hate Symbols ─────────────────────────────────────────────────
 卐
 卍
 
-# Other Potentially Offensive
-🤬
-💩
-🤮
+# ── Dangerous / Risk ─────────────────────────────────────────────
+🧪
+💉
+🩺
+☢️
+☣️
+⚠️
+🚨

@@ -7,3 +7,5 @@ better-profanity
 tf-keras
 scikit-learn
 requests
+datasets
+accelerate

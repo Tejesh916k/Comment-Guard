@@ -40,13 +40,10 @@ lavada
 kojja
 hijra
 bocchu
-labor
 ne yamma
 ne ayya
 boku
 badcow
-vp
-vp gadu
 erri puku
 pichi lanjakodaka
 bokulo
@@ -93,7 +90,6 @@ labor na kodaka
 chapri
 chapri gadu
 errihook
-hook
 hook gadu
 bhadcow
 bhadkaw
@@ -116,9 +112,6 @@ solu
 sollu gadu
 vadhura
 odiyamma
-orey
-arei
-entra
 yadava
 yedava
 tudumu
@@ -126,26 +119,19 @@ waste body
 chetha
 chetta
 pendu
-goo
-compost
 trash
 garbage
 dirty fellow
 nasty
-cheap
 cheap fellow
 low class fellow
 third class
 3rd class
 4th class
-mental
 mentalo
 psycho
 sadist
-torture
 thupuk
-thu
-yiee
 worst gadu
 pichi na kodaka
 erri na kodaka
@@ -174,24 +160,14 @@ noru muyyi
 noru musuko
 notlo
 guddalo
-venaka
-mundu
-pakka
-pakkana
 basthi
 slum
 slum fellow
-local
 local gadu
-ooru
-palletooru
-villager
 uncivilized
 barbarian
 brute
 savage
-animal
-beast
 rakshasuda
 rakshasi
 witch
@@ -215,26 +191,13 @@ boobs
 nipple
 penis
 vagina
-sex
 fuck
 fucking
 fucked
 screwed
 shagged
-boned
-banged
 humped
-plowed
-drilled
-nailed
-pounded
-hammered
-rammed
-stuffed
-filled
 creampie
-facial
-cum
 sperm
 semen
 jizz
@@ -249,37 +212,14 @@ abuse
 violate
 degrade
 humiliate
-kill
-murder
-die
-death
 suicide
 kys
-hang
-shoot
-stab
-poison
 choke
 strangle
 suffocate
-drown
-burn
-beat
-hit
 slap
-punch
-kick
 spit
-piss
 shit
-crap
-dump
-fart
-vomit
-puke
-stink
-smell
-reek
 filth
 grime
 muck
@@ -290,28 +230,13 @@ pest
 parasite
 leech
 maggot
-worm
-slug
-roach
-rat
-mouse
-pig
-donkey
-ass
 jackass
 mule
 ox
 bull
-cow
-goat
-sheep
-chicken
 vulture
-crow
 snake
 lizard
-frog
-toad
 basthi gadu
 basthi fellow
 road fellow
@@ -393,14 +318,12 @@ dengesadi
 dengesam
 dengesaru
 dengesai
-dengesta
 dengestav
 dengestadu
 dengestadi
 dengestam
 dengestaru
 dengestai
-dengutanu
 dengutav
 dengutadu
 dengutadi
@@ -479,3 +402,24 @@ notlo petti dengutanu
 bokkalo petti dengutanu
 lavadalo petti dengutanu
 moddalo petti dengutanu
+you are stupid
+you are an idiot
+you're so dumb
+what a loser
+i will find you
+you deserve to die
+i hate you
+you're disgusting
+nobody likes you
+you're pathetic
+get lost
+nobody asked
+you're worthless
+you're trash
+kill yourself
+you're ugly
+you're annoying
+go to hell
+stupid ga unnav
+this is garbage
+nobody asked for your opinion

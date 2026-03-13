@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=380, initial-scale=1.0">
+  <title>Comment Guard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="header-left">
+        <img src="icons/icon48.png" alt="Logo" class="logo">
+        <div>
+          <h1>Comment Guard</h1>
+          <p class="subtitle">AI Comment Moderation</p>
+        </div>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggleExtension" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar" id="statusBar">
+      <span class="status-dot connected" id="statusDot"></span>
+      <span id="statusText">Checking connection...</span>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-number" id="scannedCount">0</span>
+        <span class="stat-label">Scanned</span>
+      </div>
+      <div class="stat-card toxic">
+        <span class="stat-number" id="toxicCount">0</span>
+        <span class="stat-label">Toxic</span>
+      </div>
+      <div class="stat-card safe">
+        <span class="stat-number" id="safeCount">0</span>
+        <span class="stat-label">Safe</span>
+      </div>
+    </div>
+
+    <!-- Settings -->
+    <div class="settings-section">
+      <h2>Settings</h2>
+
+      <div class="setting-row">
+        <label for="backendUrl">Backend URL</label>
+        <input type="text" id="backendUrl" placeholder="http://localhost:8000" value="http://localhost:8000">
+      </div>
+
+      <div class="setting-row">
+        <label for="strictness">Strictness</label>
+        <select id="strictness">
+          <option value="high">High (Strict)</option>
+          <option value="low">Low (Balanced)</option>
+        </select>
+      </div>
+
+      <div class="setting-row">
+        <label for="action">Toxic Comment Action</label>
+        <select id="action">
+          <option value="highlight">Highlight (Red Border)</option>
+          <option value="blur">Blur Content</option>
+          <option value="hide">Hide Completely</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="actions">
+      <button id="saveBtn" class="btn btn-primary">Save Settings</button>
+      <button id="resetBtn" class="btn btn-secondary">Reset Stats</button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>Telugu-English Code-Mixed Support</p>
+      <p class="version">v1.0.0</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
