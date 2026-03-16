@@ -22,7 +22,7 @@ The following detection pipeline ensures high-precision filtering:
 1. Profanity Filter: Uses the better-profanity library combined with a custom Telugu badwords list.
 2. Keyword Regex: Over 40 compiled regex patterns for insults, threats, and Tenglish slurs.
 3. Emoji Check: A dedicated list for detecting offensive or vulgar emojis.
-4. ML Model: A fine-tuned DistilBERT (toxic-bert) model for understanding contextual toxicity.
+4. ML Model: A fine-tuned **MuRIL BERT** (`google/muril-base-cased`) model for understanding contextual toxicity in Telugu-English code-mixed content.
 
 ---
 
@@ -51,7 +51,7 @@ The following detection pipeline ensures high-precision filtering:
 * Language: Python 3.12
 * Framework: FastAPI (Async REST API)
 * Deep Learning: PyTorch and HuggingFace Transformers
-* Model: Fine-tuned toxic-bert (DistilBERT)
+* Model: Fine-tuned **MuRIL BERT** (google/muril-base-cased)
 * Processing: Pandas and Scikit-learn for data and metrics
 
 ### Frontend
@@ -89,4 +89,4 @@ The system uses a combination of a Telugu bad words database, regex patterns for
 We maintain a whitelist of mild terms and safe phrases (e.g., "keep it up"). Additionally, the ML model threshold is adjustable—Celebrity mode uses a stricter threshold, while Friend mode is more lenient.
 
 ### What are the future plans for the system?
-Future improvements include supporting more Indian languages (Hindi, Tamil), implementing an admin dashboard for moderation analytics, and fine-tuning on even larger multilingual models like MuRIL.
+Future improvements include supporting more Indian languages (Hindi, Tamil), implementing an admin dashboard for moderation analytics, and fine-tuning on even larger datasets or models to handle regional slang. (MuRIL support is already implemented).

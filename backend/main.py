@@ -130,12 +130,10 @@ app.add_middleware(
 
 # Initialize the toxicity classification pipeline
 # We use 'original' to keep the original distilbert-base-uncased-finetuned-sst-2-english if we wanted simple sentiment
-# But for toxicity, 'unitary/toxic-bert' is preferred. 
-# However, to avoid huge downloads during a demo, we can use a smaller model or just 'text-classification'.
-# Let's stick to the plan: DistilBERT fine-tuned on toxic comments.
-# 'unitary/toxic-bert' is excellent but might be large.
-# 'martin-haas/toxic-comment-model' is a distilbert version.
-# Let's use a standard pipeline that is robust.
+# However, for toxicity detection in Telugu-English code-mixed content, MuRIL (Multilingual 
+# Representations for Indian Languages) BERT is preferred over standard DistilBERT or toxic-bert.
+# MuRIL is specifically trained on Indian languages and handles code-switching much better.
+# Current production model: google/muril-base-cased (fine-tuned)
 import torch
 
 # Optimizatons to prevent PyTorch from lagging the entire OS when running on CPU
@@ -158,8 +156,9 @@ try:
         print(f"✓ Loading fine-tuned model from: {fine_tuned_path}")
         classifier = pipeline("text-classification", model=fine_tuned_path, top_k=None, device=device)
     else:
-        print("Loading default model: unitary/toxic-bert")
-        classifier = pipeline("text-classification", model="unitary/toxic-bert", top_k=None, device=device)
+        print("Loading default model: google/muril-base-cased (Fallback)")
+        print("Note: MuRIL is highly recommended for Telugu-English code-mixed content.")
+        classifier = pipeline("text-classification", model="google/muril-base-cased", top_k=None, device=device)
 except Exception as e:
     print(f"Error loading model: {e}")
     classifier = None

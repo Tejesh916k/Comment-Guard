@@ -1,6 +1,6 @@
 """
-Fine-tune unitary/toxic-bert on the HOLD-Telugu (Dravidian CodeMix) dataset.
-
+Fine-tune MuRIL (google/muril-base-cased) on the HOLD-Telugu (Dravidian CodeMix) dataset.
+(MuRIL handles Telugu significantly better than standard toxic-bert)
 SETUP:
 1. Place the downloaded Excel file in: backend/data/  (any .xlsx file)
 2. Install deps: pip install transformers torch scikit-learn accelerate openpyxl pandas
@@ -73,7 +73,8 @@ DATA_DIR   = BASE_DIR / "data"
 OUTPUT_DIR = BASE_DIR / "model_output"
 
 # ── Config ────────────────────────────────────────────────────────────────────
-BASE_MODEL    = "unitary/toxic-bert"   # BERT fine-tuned for toxicity detection
+BASE_MODEL    = "google/muril-base-cased"   # MuRIL (Multilingual BERT) for Indian languages
+# BASE_MODEL    = "unitary/toxic-bert"         # Fallback to general toxic-bert if needed
 MAX_LENGTH    = 128  # Longer context = better understanding of comments
 EPOCHS        = 8    # More epochs with early stopping patience=2
 LEARNING_RATE = 3e-5 # Slightly higher LR for faster convergence
