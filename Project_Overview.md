@@ -22,7 +22,7 @@ The following detection pipeline ensures high-precision filtering:
 1. Profanity Filter: Uses the better-profanity library combined with a custom Telugu badwords list.
 2. Keyword Regex: Over 40 compiled regex patterns for insults, threats, and Tenglish slurs.
 3. Emoji Check: A dedicated list for detecting offensive or vulgar emojis.
-4. ML Model: A fine-tuned **MuRIL BERT** (`google/muril-base-cased`) model for understanding contextual toxicity in Telugu-English code-mixed content.
+4. ML Model: A fine-tuned **MuRIL BERT** (technically identified as `google/muril-base-cased` on Hugging Face) for understanding contextual toxicity in Telugu-English code-mixed content.
 
 ---
 
@@ -55,9 +55,10 @@ The system performs the following steps before analysis:
 
 ---
 
-## MuRIL BERT Model
+## MuRIL BERT Model (`google/muril-base-cased`)
 
-The system uses **MuRIL** (Multilingual Representations for Indian Languages) as the core ML model:
+The system uses **MuRIL BERT** (Multilingual Representations for Indian Languages) as the core ML model. The technical model ID used in the code and training scripts is **`google/muril-base-cased`**.
+
 * **Base Model**: `google/muril-base-cased`
 * **Fine-tuning**: Trained on the HOLD-Telugu dataset and custom code-mixed samples.
 * **Architecture**: BERT-based encoder optimized for Indian languages and their transliterated forms.
@@ -82,7 +83,7 @@ The system uses the standard MuRIL WordPiece tokenizer:
 * Language: Python 3.12
 * Framework: FastAPI (Async REST API)
 * Deep Learning: PyTorch and HuggingFace Transformers
-* Model: Fine-tuned **MuRIL BERT** (google/muril-base-cased)
+* Model: Fine-tuned **MuRIL BERT** (`google/muril-base-cased`)
 * Processing: Pandas and Scikit-learn for data and metrics
 
 ### Frontend
