@@ -45,6 +45,37 @@ The following detection pipeline ensures high-precision filtering:
 
 ---
 
+## Preprocessing
+
+The system performs the following steps before analysis:
+1. **Deduplication**: Removing identical consecutive comments.
+2. **Text Cleaning**: Normalizing whitespace and removing irrelevant symbols.
+3. **Code-Mix Filtering**: Identifying Telugu-English mixed content for specialized processing.
+4. **Label Normalization**: Mapping various dataset labels to a unified `toxic`/`non-toxic` format.
+
+---
+
+## MuRIL BERT Model
+
+The system uses **MuRIL** (Multilingual Representations for Indian Languages) as the core ML model:
+* **Base Model**: `google/muril-base-cased`
+* **Fine-tuning**: Trained on the HOLD-Telugu dataset and custom code-mixed samples.
+* **Architecture**: BERT-based encoder optimized for Indian languages and their transliterated forms.
+* **Performance**: High contextual understanding of Telugu slurs written in English script.
+
+---
+
+## Tokenizer
+
+The system uses the standard MuRIL WordPiece tokenizer:
+* **Vocabulary size**: 197,285 tokens.
+* **Handling**: Efficiently breaks down code-mixed words into sub-word units.
+* **Transliteration**: Supports both native Telugu script and Romanized (Tenglish) text.
+
+---
+
+---
+
 ## Technology Stack
 
 ### Backend
