@@ -4,7 +4,7 @@ console.log("Comment Guard Background Service Worker started.");
 
 // Default settings
 const defaultSettings = {
-    backendUrl: "http://localhost:8000",
+    backendUrl: "https://tejesh916k-comment-guard-api.hf.space",
     strictness: "low"
 };
 

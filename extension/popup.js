@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         statusText.textContent = 'Checking connection...';
 
         chrome.storage.local.get(['backendUrl'], (result) => {
-            const url = result.backendUrl || "http://localhost:8000";
+            const url = result.backendUrl || "https://tejesh916k-comment-guard-api.hf.space";
             
             // Just ping the root to see if server is alive
             fetch(`${url}/`)

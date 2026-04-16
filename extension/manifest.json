@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Comment Guard",
-  "version": "1.0.0",
-  "description": "AI-powered comment moderation for social media. Detects toxic, hateful, and offensive comments in Telugu-English code-mixed text.",
+  "version": "2.1.0",
+  "description": "AI-powered comment moderation for YouTube, Instagram, WhatsApp Web & more. Detects toxic comments in Telugu-English using MuRIL BERT AI.",
   "permissions": [
     "activeTab",
     "storage"
   ],
   "host_permissions": [
-    "http://localhost:8000/*",
+    "https://*.hf.space/*",
     "https://*/*",
     "http://*/*"
   ],
